@@ -1,0 +1,383 @@
+@import url("https://use.typekit.net/vzt7baa.css");
+
+/* OVERALL STYLING */
+* {
+	box-sizing: border-box;
+    padding: 0;
+	margin: 0;
+}
+
+body {
+    line-height: 1.75rem;
+}
+
+h1, h2, h3, h4, h4, h5, h6 {
+    font-family: "museo-sans", sans-serif;
+    font-weight: lighter;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+h4 {
+    font-size: 28px;
+}
+
+h5 {
+    font-size: 22px;
+}
+
+h6 {
+    font-size: 20px;
+}
+
+p, a {
+    font-family: "adelle", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.text_headers_line_spacing {
+    padding: .75rem 0rem;
+    line-height: 2rem;
+}
+
+/* HEADER FORMAT */
+/* Styling keeps header, including the navbar at the top of the screen when the user scrolls... z-index keeps these elements at the viewport's forefront. */
+.navbar_logo_img {
+	height: 70px;
+	width: 130px;
+    margin: 0rem 1.5rem;
+    display: flex;
+}
+
+.header {
+    background-color: #fff;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    z-index: 100;
+}
+
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: white;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-height: 0;
+    transition: max-height 350ms;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.header li {
+    display: flex;
+    justify-content: center;
+}
+
+.header li a {
+    padding: 20px;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    color: #1B4261;;
+}
+
+.header li a:hover,
+.header .menu-btn:hover,
+.header li a:focus, 
+.header .menu-btn:focus {
+    color: #5cb5fe;
+}
+
+.header .menu-btn:checked ~ ul {
+    max-height: 300px;
+}
+
+label.menu-icon {
+    display: flex;
+    align-items: center;
+}
+
+.header .menu-icon {
+    cursor: pointer;
+    padding: 28px 20px;
+}
+
+.header .menu-btn {
+    display: none;
+}
+
+/* MAIN CONTENT BODY STYLING */
+.overall_main_content_grid {
+    min-height: 375vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(11, 1fr);
+    background-color: #dfeaf3;
+}
+
+/* Hero image area */
+.hero_img_area {
+    display: flex;
+    grid-row: 1 / 3;
+    grid-column: 1 / 3;
+    background-image: url(../images/cover-thumbnail-cartoon-char-and-maascot-char-unc.jpg);
+    background-position: top;
+    background-size: cover;
+}
+
+.hero_img_text {
+    place-self: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    border-radius: 3px;
+    width: 100%;
+    background-color: #417BAB;
+    color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+/* Partners content area */
+.partners_area {
+    display: flex;
+    flex-direction: column;
+    grid-row: 3 / 6;
+    grid-column: 1 / 3;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem 1rem;
+    line-height: 2rem;
+    margin: 3rem 1rem;
+    background-color: #1B4261;
+    color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.partners_area img {
+    border-radius: 4px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.partners_area h4 {
+    margin-bottom: 1rem;
+}
+
+.partners_area img {
+    margin-bottom: 2rem;
+}
+
+/* Hyperlink format in partners text */
+#contact_us_relink_format {
+    color: #BDE6FF;
+    text-decoration: dotted;
+    font-size: 1.45rem;
+}
+
+#contact_us_relink_format:hover, #contact_us_relink_format:focus {
+    color: #A3D6FF;
+    cursor: pointer;
+}
+
+/* Class helps scale image here and in media query */
+.graphic_scaling {
+    width: 100%;
+    height: auto;
+}
+
+/* Split image-text areas */
+.split_img_1 {
+    grid-row: 6 / 8;
+    grid-column: 1 / 3;
+    background-image: url(../images/splunk_partnership.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 3px;
+}
+
+.split_text_1 {
+    display: flex;
+    flex-direction: column;
+    grid-row: 8 / 10;
+    grid-column: 1 / 3;
+    place-content: center;
+    padding: 3rem 1.5rem;
+    line-height: 2rem;
+    margin: 3rem 1rem 0rem 1rem;
+    background-color: #1B4261;
+    color: white;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.split_text_1 h4, .split_text_2 h4 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+#split_text_1_italic {
+    font-style: italic;
+}
+
+/* Split image 2 not included in mobile layout to keep layout less complicated */
+.split_text_2 {
+    display: flex;
+    flex-direction: column;
+    grid-row: 10 / 12;
+    grid-column: 1 / 3;
+    place-content: center;
+    padding: 3rem 1.5rem;
+    line-height: 2rem;
+    margin: 3rem 1rem;
+    background-color: #1B4261;
+    color: white;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.split_text_1 h6, .split_text_2 h6 {
+    margin-top: 2rem;
+}
+
+/* FOOTER STYLING */
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: .75rem 0rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    padding: 1rem;
+}
+
+footer ul {
+    display: flex;
+    align-self: center;
+    list-style: none;
+}
+
+.footer_logo_img {
+	height: 70px;
+	width: 130px;
+    display: flex;
+}
+
+/* MEDIA QUERIES */
+/* Small to medium switch */
+@media screen and (min-width: 768px) {
+    /* Navbar expansion styling */
+    .navbar_logo_img {
+        top: 20px;
+    }
+
+    .header ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+        background-color: #fff;
+        position: absolute;
+        top: 16px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        max-height: none;
+        box-shadow: none;
+        right: 0;
+        width: 60%;
+    }
+
+    .header li {
+        border-bottom: 0px solid black;
+    }
+
+    .header .menu-icon {
+        display: none;
+    }
+
+    /* General Body Styling */
+    .hero_img_text {
+        place-self: center;
+        padding: 1.5rem 6rem 1.5rem 1.5rem;
+        margin-top: 3rem;
+        border-radius: 3px;
+        width: 60%;
+        background-color: #3886C7;
+        color: white;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
+
+    .partners_area {
+        margin: 3rem 8rem;
+        padding: 3rem 2rem;
+        border-radius: 3px;
+    }
+
+    .graphic_scaling {
+        height: auto;
+        width: 60%;
+    }
+
+    /* Split image-text shift with media query... gets them side by side */
+    .split_img_1 {
+        grid-row: 6 / 9;
+        grid-column: 1 / 2;
+        line-height: 2rem;
+        margin: 1rem 1rem;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
+    
+    .split_text_1 {
+        grid-row: 6 / 9;
+        grid-column: 2 / 3;
+        line-height: 2rem;
+        margin: 8rem 1rem;
+        padding: 3rem 2rem;
+    }
+    
+    .split_img_2 {
+        grid-row: 9 / 12;
+        grid-column: 1 / 2;
+        background-image: url(../images/busi_tech_resume_workshop.jpeg);
+        background-position: center;
+        background-size: cover;;
+        line-height: 2rem;
+        margin: 1rem 1rem;
+        border-radius: 3px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
+    
+    .split_text_2 {
+        grid-row: 9 / 12;
+        grid-column: 2 / 3;
+        line-height: 2rem;
+        margin: 8rem 1rem;
+        padding: 3rem 2rem;
+    }
+}
+
+@media screen and (min-height: 660px) and (min-width: 640px) {
+    .overall_main_content_grid {
+        min-height: 200vh;
+    }
+}

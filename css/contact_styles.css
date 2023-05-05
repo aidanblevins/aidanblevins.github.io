@@ -1,0 +1,399 @@
+@import url("https://use.typekit.net/vzt7baa.css");
+
+/* OVERALL STYLING */
+* {
+	box-sizing: border-box;
+    padding: 0;
+	margin: 0;
+}
+
+body {
+    line-height: 1.75rem;
+}
+
+h1, h2, h3, h4, h4, h5, h6 {
+    font-family: "museo-sans", sans-serif;
+    font-weight: lighter;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+h4 {
+    font-size: 28px;
+}
+
+h5 {
+    font-size: 22px;
+}
+
+h6 {
+    font-size: 20px;
+}
+
+p, a, label {
+    font-family: "adelle", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.text_headers_line_spacing {
+    padding: .75rem 0rem;
+    line-height: 2rem;
+}
+
+.contrast_color {
+    color: #add8f5;
+}
+
+button, .form_button {
+    border-radius: 5px;
+    width: 100%;
+    padding: 1rem;
+    margin: 3rem 1rem 1rem 0rem;
+    transition: all 250ms ease-in-out;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-weight: bold;
+    background-color: white;
+    color: #3886C7;
+    border: 3px solid #5cb5fe; 
+    text-align: center;
+}
+
+/* Hover effect for button on main content area */
+button:hover, button:focus, .form_button:hover, .form_button:focus {
+    background-color: #5cb5fe;
+    color: white;
+    cursor: pointer;
+}
+
+/* HEADER FORMAT */
+/* Styling keeps header, including the navbar at the top of the screen when the user scrolls... z-index keeps these elements at the viewport's forefront. */
+header {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    padding: .75rem 0rem;
+    /* Box shadow adapted from CSS Scan's beautiful box shadows */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+/* NAVBAR FORMAT */
+/* Keeps navbar to the top left side of the viewport... transform helps expand the hamburger menu smoothly. */
+.navbar_logo_img {
+	height: 70px;
+	width: 130px;
+    margin: 0rem 1.5rem;
+    display: flex;
+}
+
+.header {
+    background-color: #fff;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    z-index: 100;
+}
+
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: white;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-height: 0;
+    transition: max-height 350ms;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.header li {
+    display: flex;
+    justify-content: center;
+}
+
+.header li a {
+    padding: 20px;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    color: #1B4261;;
+}
+
+.header li a:hover,
+.header .menu-btn:hover,
+.header li a:focus, 
+.header .menu-btn:focus {
+    color: #5cb5fe;
+}
+
+.header .menu-btn:checked ~ ul {
+    max-height: 300px;
+}
+
+.header .menu-icon {
+    cursor: pointer;
+    padding: 28px 20px;
+}
+
+.header .menu-btn {
+    display: none;
+}
+
+/* MAIN CONTENT BODY STYLING */
+.overall_main_content_grid {
+    height: 325vh;
+    display: grid;
+    grid-template-columns: repeat (4, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+    background-color: #dfeaf3;
+}
+
+/* Big hero image after navbar */
+.hero_img {
+    display: flex;
+    grid-column: 1 / 3;
+    grid-row: 1 / 6;
+    background-color: #1B4261;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+/* Text that overlays the hero image */
+.hero_img_text_overlay {
+    color: white;
+    place-self: center;
+    padding: 0rem 1rem;
+}
+
+.text_headers_line_spacing {
+    line-height: 2.5rem;
+}
+
+.text_headers_line_spacing h2, .text_headers_line_spacing h3, .text_headers_line_spacing h4 {
+    padding: .75rem 0rem;
+}
+
+/* Main content area */
+.main_content_form {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    grid-row: 6 / 12;
+    grid-column: 1 / 3;
+    padding: 1rem;
+    color: #10293d;
+}
+
+.main_content_form h2 {
+    padding: 3rem;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 2rem;
+}
+
+form h3 {
+    padding-bottom: 1.5rem;
+    padding-top: 1rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    border-radius: 5px;
+    align-self: center;
+    justify-content: center;
+    height: 65%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    padding: 1rem;
+    background: #dbdbdb;
+}
+
+form input {
+    margin-bottom: 1rem;
+}
+
+form label {
+    margin-top: 1.25rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid transparent;
+    font-size: 16px;
+    height: auto;
+    margin: 0;
+    outline: 0;
+    padding: 1rem;
+    width: 100%;
+    background-color: #f5f5f5;
+    color: #1B4261;
+    transition: all 350ms;
+}
+
+textarea {
+    padding-bottom: 2rem;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: hsla(215, 100%, 64%, 0.6);
+}
+
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus {
+    border: 2px solid hsla(222, 81%, 27%, 0.6);
+}
+
+select {
+    padding: .5rem;
+    height: 2rem;
+    border-radius: 3px;
+}
+
+fieldset {
+    margin-bottom: 1rem;
+    border: none;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* FOOTER STYLING */
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: .75rem 0rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    padding: 1rem;
+}
+
+footer ul {
+    display: flex;
+    align-self: center;
+    list-style: none;
+}
+
+.footer_logo_img {
+	height: 70px;
+	width: 130px;
+}
+
+/* MEDIA QUERIES */
+/* Small to medium switch... width wise */
+@media screen and (min-width: 768px) {
+    /* Navbar expansion styling */
+    .navbar_logo_img {
+        top: 20px;
+    }
+
+    .header ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+        background-color: #fff;
+        position: absolute;
+        top: 16px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        max-height: none;
+        box-shadow: none;
+        right: 0;
+        width: 60%;
+    }
+
+    .header li {
+        border-bottom: 0px solid black;
+    }
+
+    .header .menu-icon {
+        display: none;
+    }
+
+    /* Overall Body Format */
+    .hero_img {
+        display: flex;
+        grid-column: 1 / 3;
+        grid-row: 1 / 12;
+        box-shadow: none;
+    }
+
+    .text_headers_line_spacing {
+        line-height: 3rem;
+    }
+
+    .main_content_form {
+        display: flex;
+        flex-direction: column;
+        place-content: center;
+        grid-row: 1 / 12;
+        grid-column: 3 / 5;
+        padding: 3rem 2rem;
+    }
+
+    form {
+        width: 95%;
+    }
+    
+    form button {
+        width: 100%;
+    }
+}
+
+/* Smaller to medium viewport height shift */
+@media screen and (min-height: 660px) {
+    .overall_main_content_grid {
+        height: 270vh;
+    }
+
+    form {
+        height: 65%;
+    }
+}
+
+/* Medium to bigger viewport height shift */
+@media screen and (min-height: 660px) and (min-width: 768px) {
+    .overall_main_content_grid {
+        height: 140vh;
+    }
+
+    form {
+        height: 65%;
+    }
+}
