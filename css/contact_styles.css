@@ -80,7 +80,6 @@ button:hover, button:focus, .form_button:hover, .form_button:focus {
 }
 
 /* HEADER FORMAT */
-/* Styling keeps header, including the navbar at the top of the screen when the user scrolls... z-index keeps these elements at the viewport's forefront. */
 header {
     display: flex;
     justify-content: center;
@@ -94,7 +93,6 @@ header {
 }
 
 /* NAVBAR FORMAT */
-/* Keeps navbar to the top left side of the viewport... transform helps expand the hamburger menu smoothly. */
 .navbar_logo_img {
 	height: 70px;
 	width: 130px;
@@ -172,7 +170,7 @@ header {
     background-color: #dfeaf3;
 }
 
-/* Big hero image after navbar */
+/* Big hero color/image area after navbar */
 .hero_img {
     display: flex;
     grid-column: 1 / 3;
@@ -181,7 +179,6 @@ header {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
-/* Text that overlays the hero image */
 .hero_img_text_overlay {
     color: white;
     place-self: center;

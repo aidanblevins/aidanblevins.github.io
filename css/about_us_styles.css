@@ -57,7 +57,7 @@ p, a {
 }
 
 /* HEADER FORMAT */
-/* Styling keeps header, including the navbar at the top of the screen when the user scrolls... z-index keeps these elements at the viewport's forefront. */
+/* Navbar Styling */
 .navbar_logo_img {
 	height: 70px;
 	width: 130px;
