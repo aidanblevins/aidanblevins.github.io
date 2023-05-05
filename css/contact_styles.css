@@ -54,7 +54,7 @@ p, a, label {
 }
 
 .contrast_color {
-    color: #add8f5;
+    color: #AEDAF4;
 }
 
 button, .form_button {
@@ -138,7 +138,7 @@ header {
     text-decoration: none;
     width: 100%;
     text-align: center;
-    color: #1B4261;;
+    color: #1B4261;
 }
 
 .header li a:hover,
